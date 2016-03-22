@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317094406) do
+ActiveRecord::Schema.define(version: 20160322114817) do
 
   create_table "branches", force: :cascade do |t|
     t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -102,6 +107,16 @@ ActiveRecord::Schema.define(version: 20160317094406) do
   add_index "items", ["color_id"], name: "index_items_on_color_id"
   add_index "items", ["firm_id"], name: "index_items_on_firm_id"
   add_index "items", ["type_id"], name: "index_items_on_type_id"
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "cart_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id"
+  add_index "line_items", ["product_id"], name: "index_line_items_on_product_id"
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
