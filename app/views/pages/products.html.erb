@@ -1,5 +1,59 @@
-<h1>Pages#products</h1>
-<p>Find me in app/views/pages/products.html.erb</p>
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Лыжи<span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Сноуборды</a></li>
+            <li><a href="#">Снегокаты</a></li>
+            <li><a href="#">Вылосипеды</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Палатки</a></li>
+            <li><a href="">Надувные лодки</a></li>
+            <li><a href="">Катамараны</a></li>
+            <li><a href="">И так далее</a></li>
+        </div>
+          <h2 class="sub-header">Варианты товара</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                  <th>Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>sit</td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td>amet</td>
+                  <td>consectetur</td>
+                  <td>adipiscing</td>
+                  <td>elit</td>
+                </tr>
+                <tr>
+                  <td>1,003</td>
+                  <td>Integer</td>
+                  <td>nec</td>
+                  <td>odio</td>
+                  <td>Praesent</td>
+                </tr>              
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
 <% cache ['store', Item.latest] do %>
     <% @items.each do |item| %>
         <% cache ['entry', item] do %>
