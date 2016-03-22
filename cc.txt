@@ -1,0 +1,21 @@
+rails g scaffold Item type:references firm:references color:references model:string cost:float branch:references
+rails g scaffold Type title:string
+rails g scaffold Color title:string
+rails g scaffold Firm title:string
+rails g scaffold Client name:string data:string branch:references
+rails g scaffold Contract client:references item:references date:datetime time:datetime branch:references
+rails g scaffold Branch address:string
+rails g scaffold Employee post:references identity:references branch:references
+rails g scaffold Identity name:string phone:string
+rails g scaffold Post title:string salary:integer
+
+rails d scaffold item
+rails d scaffold Type
+rails d scaffold Color
+rails d scaffold Firm
+rails d scaffold Client
+rails d scaffold Contract
+rails d scaffold Branch
+rails d scaffold Employee
+rails d scaffold Identity
+rails d scaffold Post

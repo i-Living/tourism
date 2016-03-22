@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type_id: 
+  firm_id: 
+  color_id: 
+  model: MyString
+  cost: 1.5
+  branch_id: 
+
+two:
+  type_id: 
+  firm_id: 
+  color_id: 
+  model: MyString
+  cost: 1.5
+  branch_id: 

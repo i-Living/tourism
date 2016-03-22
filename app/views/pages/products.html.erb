@@ -1,0 +1,15 @@
+<h1>Pages#products</h1>
+<p>Find me in app/views/pages/products.html.erb</p>
+<% cache ['store', Item.latest] do %>
+    <% @items.each do |item| %>
+        <% cache ['entry', item] do %>
+            <div class="entry">
+              <h3><%= item.model %></h3>
+              <div class="price_line">
+                <span class="price"><%= number_to_currency(item.cost) %></span>
+                <%= button_to 'Order', items_path(item_id: item) %>
+              </div>
+            </div>
+        <% end %>
+    <% end %>
+<% end %>
