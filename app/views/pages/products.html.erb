@@ -7,7 +7,7 @@
               <h3><%= item.model %></h3>
               <div class="price_line">
                 <span class="price"><%= number_to_currency(item.cost) %></span>
-                <%= button_to 'Order', items_path(item_id: item) %>
+                <%= button_to 'Add to Cart', line_items_path(item_id: item) %>
               </div>
             </div>
         <% end %>
